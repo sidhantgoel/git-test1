@@ -1,0 +1,3 @@
+UPDATE public.release_manager SET
+    pod_members = '{{MultiSelect1.selectedOptionLabels.toString()}}'
+  WHERE id = {{Table1.selectedRow.id}}; 

@@ -1,0 +1,3 @@
+INSERT INTO public.release_manager (version, name, regression_start, assigned_pod)
+  VALUES ('{{tag_version.text}}', 
+					'{{tag_name.text}}', '{{regression_start.selectedDate}}', '{{pod_member.selectedOptionValue}}');

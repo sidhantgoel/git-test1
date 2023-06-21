@@ -1,0 +1,4 @@
+UPDATE public.release_manager SET
+    release_date = '{{moment(DatePicker1Copy.selectedDate)}}',
+		status = '{{releaseStatus.getNextStatus().name}}'
+  WHERE id = {{Table1.selectedRow.id}}

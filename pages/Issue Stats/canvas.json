@@ -1,0 +1,877 @@
+{
+  "unpublishedPage": {
+    "name": "Issue Stats",
+    "slug": "issue-stats",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 912,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 2280,
+          "containerStyle": "none",
+          "snapRows": 196,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 78,
+          "minHeight": 1292,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "Platform_Features",
+              "allowScroll": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "topRow": 152,
+              "bottomRow": 188,
+              "parentRowSpace": 40,
+              "type": "CHART_WIDGET",
+              "chartData": {
+                "1qkpiay2mk": {
+                  "data": "{{\n  function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { \n  arr.push( appsmith.store[\"Feature-\"+i + \"\"]);\n}\nconst eligibleLabels= [ \"ACL\", \"Login / Signup\", \"Telemetry\", \"Deployment\", \"Documentation\"];\nconst eligibleData = arr.filter((point) => eligibleLabels.includes(point.x));\nreturn eligibleData.map((row) => { return { x: row.x, y: row.noPriY + row.lowY + row.highY + row.critY + \"\" } })\n}()\n}}",
+                  "seriesName": ""
+                }
+              },
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "leftColumn": 32,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.1qkpiay2mk.data"
+                },
+                {
+                  "key": "customFusionChartConfig"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                }
+              ],
+              "customFusionChartConfig": "{{\n  function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { \n  arr.push( appsmith.store[\"Feature-\"+i + \"\"]);\n}\nconst eligibleLabels= [ \"ACL\", \"Login / Signup\", \"Telemetry\", \"Deployment\", \"Documentation\"];\nconst eligibleData = arr.filter((point) => eligibleLabels.includes(point.x));\nconst chartData = {\n\"type\": \"scrollstackedcolumn2d\",\n\"dataSource\": {\n    \"chart\": {\n        \"xaxisname\": \"Type\",\n        \"yaxisname\": \"No. Issues\",\n        \"numberprefix\": \"#\",\n        \"lineThickness\": \"3\",\n        \"flatScrollBars\": \"1\",\n        \"scrollheight\": \"10\",\n        \"theme\": \"fusion\"\n    },\n    \"categories\": [\n        {\n            \"category\": [\n              {\"label\":\"UI Building\"},\n              {\"label\":\"Widgets\"},\n              {\"label\":\"Pages\"},\n              {\"label\": \"Property Pane\"}\n              ]  \n        }\n    ],\n    \"dataset\": [\n        {\n            \"seriesname\": \"No Priority\",\n            \"color\": \"766d7a\",\n            \"data\": eligibleData.map((row) => { return { value: row.noPriY } })\n        },\n        {\n            \"seriesname\": \"Low\",\n            \"color\": \"eaff00\",\n            \"data\": eligibleData.map((row) => { return { value: row.lowY } })\n        },\n        {\n            \"seriesname\": \"High\",\n            \"color\": \"e86f0c\",\n            \"data\": eligibleData.map((row) => { return { value: row.highY } })\n        },\n        {\n            \"seriesname\": \"Critical\",\n            \"color\": \"db0723\",\n            \"data\": eligibleData.map((row) => { return { value: row.critY } })\n        }\n    ]\n}\n};\n   return chartData;\n}()\n}}",
+              "onDataPointClick": "{{navigateTo('https://github.com/appsmithorg/appsmith/issues?q=is%3Aopen+is%3Aissue+label%3AEnhancement+label%3A'+'\"'+Platform_Features.selectedDataPoint.x.replace(\" \", \"+\")+'\"',{}, 'NEW_WINDOW')}}",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "widgetId": "lqb0e8dqv3",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "yAxisName": "# of Issues",
+              "chartName": "Feature Requests",
+              "borderRadius": "0px",
+              "xAxisName": "Type",
+              "chartType": "PIE_CHART"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Platform_Bugs",
+              "allowScroll": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "topRow": 152,
+              "bottomRow": 188,
+              "parentRowSpace": 40,
+              "type": "CHART_WIDGET",
+              "chartData": {
+                "dagw73kt82": {
+                  "data": "{{function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { arr.push( appsmith.store[\"Bug-\"+i + \"\"]);\n}\n  return arr.filter((point) => [ \"ACL\", \"Login / Signup\", \"Telemetry\", \"Deployment\", \"Documentation\"].includes(point.x));\n}()}}",
+                  "seriesName": ""
+                }
+              },
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.dagw73kt82.data"
+                },
+                {
+                  "key": "customFusionChartConfig"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                }
+              ],
+              "customFusionChartConfig": "{{\n  function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { \n  arr.push( appsmith.store[\"Bug-\"+i + \"\"]);\n}\nconst eligibleLabels= [ \"ACL\", \"Login / Signup\", \"Telemetry\", \"Deployment\", \"Documentation\"];\nconst eligibleData = arr.filter((point) => eligibleLabels.includes(point.x));\nconst chartData = {\n\"type\": \"scrollstackedcolumn2d\",\n\"dataSource\": {\n    \"chart\": {\n        \"xaxisname\": \"Type\",\n        \"yaxisname\": \"No. Issues\",\n        \"numberprefix\": \"#\",\n        \"lineThickness\": \"3\",\n        \"flatScrollBars\": \"1\",\n        \"scrollheight\": \"10\",\n        \"theme\": \"fusion\"\n    },\n    \"categories\": [\n        {\n            \"category\": eligibleLabels.map((label) => { return { label: label } })  \n        }\n    ],\n    \"dataset\": [\n        {\n            \"seriesname\": \"No Priority\",\n            \"color\": \"766d7a\",\n            \"data\": eligibleData.map((row) => { return { value: row.noPriY } })\n        },\n        {\n            \"seriesname\": \"Low\",\n            \"color\": \"eaff00\",\n            \"data\": eligibleData.map((row) => { return { value: row.lowY } })\n        },\n        {\n            \"seriesname\": \"High\",\n            \"color\": \"e86f0c\",\n            \"data\": eligibleData.map((row) => { return { value: row.highY } })\n        },\n        {\n            \"seriesname\": \"Critical\",\n            \"color\": \"db0723\",\n            \"data\": eligibleData.map((row) => { return { value: row.critY } })\n        }\n    ]\n}\n};\n   return chartData;\n}()\n}}",
+              "onDataPointClick": "{{navigateTo('https://github.com/appsmithorg/appsmith/issues?q=is%3Aopen+is%3Aissue+label%3ABug+label%3A'+'\"'+Platform_Bugs.selectedDataPoint.x.replace(\" \", \"+\")+'\"',{}, 'NEW_WINDOW')}}",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 32,
+              "widgetId": "yn3hg23oc0",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "yAxisName": "# of Issues",
+              "chartName": "Bugs",
+              "borderRadius": "0px",
+              "xAxisName": "Type",
+              "chartType": "CUSTOM_FUSION_CHART"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Action_Features",
+              "allowScroll": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "topRow": 104,
+              "bottomRow": 144,
+              "parentRowSpace": 40,
+              "type": "CHART_WIDGET",
+              "chartData": {
+                "b1djdc4v4o": {
+                  "data": "{{\n  function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { \n  arr.push( appsmith.store[\"Feature-\"+i + \"\"]);\n}\nconst eligibleLabels= [ \"Actions\", \"JS\", \"Autocomplete\", \"API Pane\", \"Query Editor\", \"Datasources\"];\nconst eligibleData = arr.filter((point) => eligibleLabels.includes(point.x));\nreturn eligibleData.map((row) => { return { x: row.x, y: row.noPriY + row.lowY + row.highY + row.critY + \"\" } })\n}()\n}}",
+                  "seriesName": ""
+                }
+              },
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "leftColumn": 32,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.b1djdc4v4o.data"
+                },
+                {
+                  "key": "customFusionChartConfig"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                }
+              ],
+              "customFusionChartConfig": "{{\n  function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { \n  arr.push( appsmith.store[\"Feature-\"+i + \"\"]);\n}\nconst eligibleLabels= [ \"Actions\", \"JS\", \"Autocomplete\", \"API Pane\", \"Query Editor\", \"Datasources\"];\nconst eligibleData = arr.filter((point) => eligibleLabels.includes(point.x));\nreturn eligibleData.map((row) => { return { x: row.x, y: row.noPriY + row.lowY + row.highY + row.critY + \"\" } })\n}()\n}}",
+              "onDataPointClick": "{{navigateTo('https://github.com/appsmithorg/appsmith/issues?q=is%3Aopen+is%3Aissue+label%3AEnhancement+label%3A'+'\"'+Action_Features.selectedDataPoint.x.replace(\" \", \"+\")+'\"',{}, 'NEW_WINDOW')}}",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "widgetId": "tkzffqbs4l",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "yAxisName": "# of Issues",
+              "chartName": "Feature Requests",
+              "borderRadius": "0px",
+              "xAxisName": "Type",
+              "chartType": "PIE_CHART"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Action_Bugs",
+              "allowScroll": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "topRow": 104,
+              "bottomRow": 144,
+              "parentRowSpace": 40,
+              "type": "CHART_WIDGET",
+              "chartData": {
+                "ajufwbyn7o": {
+                  "data": "",
+                  "seriesName": ""
+                }
+              },
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "customFusionChartConfig"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                }
+              ],
+              "customFusionChartConfig": "{{\n  function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { \n  arr.push( appsmith.store[\"Bug-\"+i + \"\"]);\n}\nconst eligibleLabels= [ \"Actions\", \"JS\", \"Autocomplete\", \"API Pane\", \"Query Editor\", \"Datasources\"];\nconst eligibleData = arr.filter((point) => eligibleLabels.includes(point.x));\nconst chartData = {\n\"type\": \"scrollstackedcolumn2d\",\n\"dataSource\": {\n    \"chart\": {\n        \"xaxisname\": \"Type\",\n        \"yaxisname\": \"No. Issues\",\n        \"numberprefix\": \"#\",\n        \"lineThickness\": \"3\",\n        \"flatScrollBars\": \"1\",\n        \"scrollheight\": \"10\",\n        \"theme\": \"fusion\"\n    },\n    \"categories\": [\n        {\n            \"category\": eligibleLabels.map((label) => { return { label: label } })  \n        }\n    ],\n    \"dataset\": [\n        {\n            \"seriesname\": \"No Priority\",\n            \"color\": \"766d7a\",\n            \"data\": eligibleData.map((row) => { return { value: row.noPriY } })\n        },\n        {\n            \"seriesname\": \"Low\",\n            \"color\": \"eaff00\",\n            \"data\": eligibleData.map((row) => { return { value: row.lowY } })\n        },\n        {\n            \"seriesname\": \"High\",\n            \"color\": \"e86f0c\",\n            \"data\": eligibleData.map((row) => { return { value: row.highY } })\n        },\n        {\n            \"seriesname\": \"Critical\",\n            \"color\": \"db0723\",\n            \"data\": eligibleData.map((row) => { return { value: row.critY } })\n        }\n    ]\n}\n};\n   return chartData;\n}()\n}}",
+              "onDataPointClick": "{{navigateTo('https://github.com/appsmithorg/appsmith/issues?q=is%3Aopen+is%3Aissue+label%3ABug+label%3A'+'\"'+Action_Bugs.selectedDataPoint.x.replace(\" \", \"+\")+'\"',{}, 'NEW_WINDOW')}}",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 32,
+              "widgetId": "k3gbxwr9t6",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "yAxisName": "# of Issues",
+              "chartName": "Bugs",
+              "borderRadius": "0px",
+              "xAxisName": "Type",
+              "chartType": "CUSTOM_FUSION_CHART"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "UI_Features",
+              "allowScroll": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "topRow": 8,
+              "bottomRow": 48,
+              "parentRowSpace": 40,
+              "type": "CHART_WIDGET",
+              "chartData": {
+                "lt95zqbynz": {
+                  "data": "{{\n  function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { \n  arr.push( appsmith.store[\"Feature-\"+i + \"\"]);\n}\nconst eligibleLabels= [\"UI Building\",  \"Widgets\", \"Pages\", \"Property Pane\"];\nconst eligibleData = arr.filter((point) => eligibleLabels.includes(point.x));\nreturn eligibleData.map((row) => { return { x: row.x, y: row.noPriY + row.lowY + row.highY + row.critY + \"\" } })\n}()\n}}",
+                  "seriesName": ""
+                }
+              },
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "leftColumn": 32,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.lt95zqbynz.data"
+                },
+                {
+                  "key": "customFusionChartConfig"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                }
+              ],
+              "customFusionChartConfig": "{{\n  function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { \n  arr.push( appsmith.store[\"Feature-\"+i + \"\"]);\n}\nconst eligibleLabels= [\"UI Building\",  \"Widgets\", \"Pages\", \"Property Pane\"];\nconst eligibleData = arr.filter((point) => eligibleLabels.includes(point.x));\nreturn eligibleData.map((row) => { return { x: row.x, y: row.noPriY + row.lowY + row.highY + row.critY + \"\" } })\n}()\n}}",
+              "onDataPointClick": "{{navigateTo('https://github.com/appsmithorg/appsmith/issues?q=is%3Aopen+is%3Aissue+label%3AEnhancement+label%3A'+'\"'+UI_Features.selectedDataPoint.x.replace(\" \", \"+\")+'\"',{}, 'NEW_WINDOW')}}",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "widgetId": "z37gpu2usc",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "yAxisName": "# of Issues",
+              "chartName": "Feature Requests",
+              "borderRadius": "0px",
+              "xAxisName": "Type",
+              "chartType": "PIE_CHART"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "UI_Bugs",
+              "allowScroll": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "topRow": 8,
+              "bottomRow": 48,
+              "parentRowSpace": 40,
+              "type": "CHART_WIDGET",
+              "chartData": {
+                "uz1iax44bm": {
+                  "data": "{{\n  function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { arr.push( appsmith.store[\"Bug-\"+i + \"\"]);\n}\n\nconst chartData = {\n\"type\": \"scrollstackedcolumn2d\",\n\"dataSource\": {\n    \"chart\": {\n        \"xaxisname\": \"Type\",\n        \"yaxisname\": \"No. Issues\",\n        \"numberprefix\": \"#\",\n        \"lineThickness\": \"3\",\n        \"flatScrollBars\": \"1\",\n        \"scrollheight\": \"10\",\n        \"theme\": \"fusion\"\n    },\n    \"categories\": [\n        {\n            \"category\": [\n              {\"label\":\"UI Building\"},\n              {\"label\":\"Widgets\"},\n              {\"label\":\"Pages\"},\n              {\"label\": \"Property Pane\"}\n              ]  \n        }\n    ],\n    \"dataset\": [\n        {\n            \"seriesname\": \"Critical\",\n            \"color\": \"db0723\",\n            \"data\": arr.filter((point) => [\"UI Building\",  \"Widgets\", \"Pages\", \"Property Pane\"].includes(point.x)).map((row) => { return { value: row.critY } })\n        },\n        {\n            \"seriesname\": \"High\",\n            \"color\": \"e86f0c\",\n            \"data\": arr.filter((point) => [\"UI Building\",  \"Widgets\", \"Pages\", \"Property Pane\"].includes(point.x)).map((row) => { return { value: row.highY } })\n        },\n        {\n            \"seriesname\": \"Low\",\n            \"color\": \"eaff00\",\n            \"data\": arr.filter((point) => [\"UI Building\",  \"Widgets\", \"Pages\", \"Property Pane\"].includes(point.x)).map((row) => { return { value: row.lowY } })\n        },\n        {\n            \"seriesname\": \"No Priority\",\n            \"color\": \"766d7a\",\n            \"data\": arr.filter((point) => [\"UI Building\",  \"Widgets\", \"Pages\", \"Property Pane\"].includes(point.x)).map((row) => { return { value: row.noPriY } })\n        }\n    ]\n}\n};\n   return chartData;\n}()\n}}",
+                  "seriesName": ""
+                }
+              },
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.uz1iax44bm.data"
+                },
+                {
+                  "key": "customFusionChartConfig"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                }
+              ],
+              "customFusionChartConfig": "{{\n  function() { \nlet arr = [];\nfor(let i = 0; i < 14; i++) { \n  arr.push( appsmith.store[\"Bug-\"+i + \"\"]);\n}\nconst eligibleLabels= [\"UI Building\",  \"Widgets\", \"Pages\", \"Property Pane\"];\nconst eligibleData = arr.filter((point) => eligibleLabels.includes(point.x));\nconst chartData = {\n\"type\": \"scrollstackedcolumn2d\",\n\"dataSource\": {\n    \"chart\": {\n        \"xaxisname\": \"Type\",\n        \"yaxisname\": \"No. Issues\",\n        \"numberprefix\": \"#\",\n        \"lineThickness\": \"3\",\n        \"flatScrollBars\": \"1\",\n        \"scrollheight\": \"10\",\n        \"theme\": \"fusion\"\n    },\n    \"categories\": [\n        {\n            \"category\": eligibleLabels.map((label) => { return { label: label } })  \n        }\n    ],\n    \"dataset\": [\n        {\n            \"seriesname\": \"No Priority\",\n            \"color\": \"766d7a\",\n            \"data\": eligibleData.map((row) => { return { value: row.noPriY } })\n        },\n        {\n            \"seriesname\": \"Low\",\n            \"color\": \"eaff00\",\n            \"data\": eligibleData.map((row) => { return { value: row.lowY } })\n        },\n        {\n            \"seriesname\": \"High\",\n            \"color\": \"e86f0c\",\n            \"data\": eligibleData.map((row) => { return { value: row.highY } })\n        },\n        {\n            \"seriesname\": \"Critical\",\n            \"color\": \"db0723\",\n            \"data\": eligibleData.map((row) => { return { value: row.critY } })\n        }\n    ]\n}\n};\n   return chartData;\n}()\n}}",
+              "onDataPointClick": "{{navigateTo('https://github.com/appsmithorg/appsmith/issues?q=is%3Aopen+is%3Aissue+label%3ABug+label%3A'+'\"'+UI_Bugs.selectedDataPoint.x.replace(\" \", \"+\")+'\"',{}, 'NEW_WINDOW')}}",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 32,
+              "widgetId": "x24keuymnq",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "yAxisName": "# of Issues",
+              "chartName": "Bugs",
+              "borderRadius": "0px",
+              "xAxisName": "Type",
+              "chartType": "CUSTOM_FUSION_CHART"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Button1",
+              "onClick": "{{ [\"UI Building\", \"Actions\", \"JS\", \"Autocomplete\", \"Widgets\", \"Pages\", \"Property Pane\", \"API Pane\", \"Query Editor\", \"Datasources\", \"ACL\", \"Login / Signup\", \"Telemetry\", \"Deployment\"].forEach((label, index) => { fetchBugIssues.run((res, param) => {\n  let CritLen = 0;\n\tlet HighLen = 0;\n\tlet LowLen = 0;\n\tlet NoPriLen = 0;\nres.map((issue) => {\n  let noPriVal = 1;\n issue.labels.map((label) => { \n   if (label.name === \"Critical\") {\n      CritLen++;\n      noPriVal=0;\n    } else if (label.name ===\"High\") {\n      HighLen++; \n      noPriVal=0;\n    } else if (label.name === \"Low\") {\n      LowLen++; \n      noPriVal=0;\n    }\n});\n\tNoPriLen += noPriVal;\n});\nstoreValue(\"Bug-\"+param.index + \"\", { x: param.label, critY: CritLen, highY: HighLen, lowY: LowLen, noPriY: NoPriLen});\n}, undefined, { label: label, index: index });\nfetchFeatureIssues.run((res, param) => {\n\tlet CritLen = 0;\n\tlet HighLen = 0;\n\tlet LowLen = 0;\n\tlet NoPriLen = 0;\nres.map((issue) => {\n  let noPriVal = 1;\n issue.labels.map((label) => { \n   if (label.name === \"Critical\") {\n      CritLen++;\n      noPriVal=0;\n    } else if (label.name ===\"High\") {\n      HighLen++; \n      noPriVal=0;\n    } else if (label.name === \"Low\") {\n      LowLen++; \n      noPriVal=0;\n    }\n });\n\tNoPriLen += noPriVal;\n});\nstoreValue(\"Feature-\"+param.index, { x: param.label, critY: CritLen, highY: HighLen, lowY: LowLen, noPriY: NoPriLen});}, undefined, { label: label, index: index });\n });  }}",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                },
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "buttonColor": "#03B365",
+              "topRow": 0,
+              "bottomRow": 4,
+              "parentRowSpace": 40,
+              "type": "BUTTON_WIDGET",
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 56,
+              "dynamicBindingPathList": [],
+              "text": "Refresh",
+              "isDisabled": false,
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "isDefaultClickDisabled": true,
+              "widgetId": "zdseojq59f",
+              "isVisible": "true",
+              "version": 1,
+              "recaptchaType": "V3",
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "buttonVariant": "PRIMARY"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Text1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "fontSize"
+                }
+              ],
+              "topRow": 0,
+              "bottomRow": 4,
+              "parentRowSpace": 40,
+              "type": "TEXT_WIDGET",
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [],
+              "overflow": "NONE",
+              "fontFamily": "System Default",
+              "leftColumn": 16,
+              "dynamicBindingPathList": [],
+              "text": "Issue Stats",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 48,
+              "textAlign": "CENTER",
+              "dynamicHeight": "FIXED",
+              "widgetId": "ezktjvqpdb",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "version": 1,
+              "textColor": "#231F20",
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "maxDynamicHeight": 9000,
+              "fontSize": "1.5rem",
+              "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Text2",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "fontSize"
+                }
+              ],
+              "topRow": 4,
+              "bottomRow": 8,
+              "parentRowSpace": 40,
+              "type": "TEXT_WIDGET",
+              "parentColumnSpace": 74,
+              "overflow": "NONE",
+              "fontFamily": "System Default",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "text": "UI Pod",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 16,
+              "textAlign": "LEFT",
+              "dynamicHeight": "FIXED",
+              "widgetId": "7ya0pcbulh",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "version": 1,
+              "textColor": "#231F20",
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "maxDynamicHeight": 9000,
+              "fontSize": "1.5rem",
+              "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Text3",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "fontSize"
+                }
+              ],
+              "topRow": 100,
+              "bottomRow": 104,
+              "parentRowSpace": 40,
+              "type": "TEXT_WIDGET",
+              "parentColumnSpace": 74,
+              "overflow": "NONE",
+              "fontFamily": "System Default",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "text": "Action Pod",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 16,
+              "textAlign": "LEFT",
+              "dynamicHeight": "FIXED",
+              "widgetId": "j27u5n24ky",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "version": 1,
+              "textColor": "#231F20",
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "maxDynamicHeight": 9000,
+              "fontSize": "1.5rem",
+              "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Text4",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "fontSize"
+                }
+              ],
+              "topRow": 148,
+              "bottomRow": 152,
+              "parentRowSpace": 40,
+              "type": "TEXT_WIDGET",
+              "parentColumnSpace": 74,
+              "overflow": "NONE",
+              "fontFamily": "System Default",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "text": "Platform Pod",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 16,
+              "textAlign": "LEFT",
+              "dynamicHeight": "FIXED",
+              "widgetId": "1mz91y6jkw",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "version": 1,
+              "textColor": "#231F20",
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "maxDynamicHeight": 9000,
+              "fontSize": "1.5rem",
+              "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Widget_Issues",
+              "allowScroll": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "topRow": 48,
+              "bottomRow": 96,
+              "parentRowSpace": 40,
+              "type": "CHART_WIDGET",
+              "chartData": {
+                "98tipygcdk": {
+                  "data": "{{\nfunction() {\n  const countMap = {};\n  const widgetLabels = fetchLabels.data.filter((label) => {  \n    return label.name.toLowerCase().includes(\"widget\") && label.name !== \"Widgets\" \n  });\n  const allWidgetIssues = [...(fetchWidgetIssues1).data, ...fetchWidgetIssues2.data];\nwidgetLabels.forEach((widgetLabel) => {  \n  allWidgetIssues.forEach((issue) => { \n  const foundIssue =  issue.labels.find((label) => label.name == widgetLabel.name );\n  if (foundIssue) {\n    if (countMap[widgetLabel.name] !== undefined)\n      countMap[widgetLabel.name] += 1; \n    else countMap[widgetLabel.name] = 1;\n  }\n });\n});\nreturn Object.keys(countMap).map((key) => { return { x: key, y: countMap[key] } });\n }();\n}}",
+                  "seriesName": ""
+                }
+              },
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.98tipygcdk.data"
+                },
+                {
+                  "key": "customFusionChartConfig"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                }
+              ],
+              "customFusionChartConfig": "{{\nfunction() {\n  const countMap = {};\n  const widgetLabels = fetchLabels.data.filter((label) => {  \n    return label.name.toLowerCase().includes(\"widget\") && label.name !== \"Widgets\" \n  });\n  const allWidgetIssues = [...fetchWidgetIssues1.data, ...fetchWidgetIssues2.data];\nwidgetLabels.forEach((widgetLabel) => {  \n  allWidgetIssues.forEach((issue) => {\n    let isBug = false;\n    let isFeature = false;\n    let isWidget = false;\n  const foundBug =  issue.labels.map((label) => {\n    if (label.name == widgetLabel.name)\n      isWidget = true;\n    if (label.name === \"Bug\") \n      isBug = true;\n    if (label.name === \"Enhancement\")\n      isFeature = true;\n  } );\n  if (isWidget && (isBug || isFeature)) {\n    if (countMap[widgetLabel.name] !== undefined) {\n      if (isBug) {\n        countMap[widgetLabel.name].bug +=1;\n      } else {\n        countMap[widgetLabel.name].feature +=1;\n      } \n    } else  {\n      if (isBug) {\n        countMap[widgetLabel.name] = {\n          bug: 1,\n          feature: 0\n        }\n      } else {\n        countMap[widgetLabel.name] = {\n          bug: 0,\n          feature: 1\n        }\n      }\n    }\n  }\n });\n});\nconst chartData = {\n\"type\": \"scrollstackedcolumn2d\",\n\"dataSource\": {\n    \"chart\": {\n        \"xaxisname\": \"Type\",\n        \"yaxisname\": \"No. Issues\",\n        \"numberprefix\": \"#\",\n        \"lineThickness\": \"3\",\n        \"flatScrollBars\": \"1\",\n        \"scrollheight\": \"10\",\n        \"theme\": \"fusion\"\n    },\n    \"categories\": [\n        {\n            \"category\": Object.keys(countMap).map((label) => { return { label: label } }) \n        }\n    ],\n    \"dataset\": [\n        {\n            \"seriesname\": \"Features\",\n            \"color\": \"4287f5\",\n            \"data\": Object.values(countMap).map((value) => { return { value: value.feature } })\n        },\n        {\n            \"seriesname\": \"Bugs\",\n            \"color\": \"e08916\",\n            \"data\": Object.values(countMap).map((value) => { return { value: value.bug } })\n        }\n    ]\n}\n};\n\nreturn chartData;\n }();\n}}",
+              "onDataPointClick": "{{navigateTo('https://github.com/appsmithorg/appsmith/issues?q=is%3Aopen+is%3Aissue+label%3A'+'\"'+Widget_Issues.selectedDataPoint.x.replace(\" \", \"+\")+'\"',{}, 'NEW_WINDOW')}}",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "widgetId": "tdvwwq5pe0",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "yAxisName": "Issues",
+              "chartName": "Widget Issues",
+              "borderRadius": "0px",
+              "xAxisName": "Widgets",
+              "chartType": "CUSTOM_FUSION_CHART"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Modal1",
+              "topRow": 0,
+              "bottomRow": 0,
+              "parentRowSpace": 1,
+              "type": "MODAL_WIDGET",
+              "shouldScrollContents": true,
+              "parentColumnSpace": 1,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "children": [
+                {
+                  "boxShadow": "none",
+                  "widgetName": "Canvas1",
+                  "topRow": 0,
+                  "bottomRow": 600,
+                  "parentRowSpace": 1,
+                  "canExtend": true,
+                  "type": "CANVAS_WIDGET",
+                  "shouldScrollContents": false,
+                  "minHeight": 600,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "boxShadow": "none",
+                      "widgetName": "Icon1",
+                      "rightColumn": 64,
+                      "onClick": "{{closeModal('Modal1')}}",
+                      "iconName": "cross",
+                      "buttonColor": "#2E3D49",
+                      "widgetId": "9tm6x2j2g8",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "isVisible": true,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "version": 1,
+                      "parentId": "c4hhvcrfmp",
+                      "isLoading": false,
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [],
+                      "borderRadius": "0px",
+                      "buttonVariant": "TERTIARY",
+                      "iconSize": 24
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text5",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "type": "TEXT_WIDGET",
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "text": "Modal Title",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 40,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "hijvs0giwn",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "c4hhvcrfmp",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.5rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "labelTextSize": "0.875rem",
+                      "boxShadow": "none",
+                      "widgetName": "Button2",
+                      "rightColumn": 48,
+                      "isDefaultClickDisabled": true,
+                      "buttonColor": "#03B365",
+                      "widgetId": "u84g7m7nwx",
+                      "topRow": 52,
+                      "bottomRow": 56,
+                      "isVisible": true,
+                      "type": "BUTTON_WIDGET",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "c4hhvcrfmp",
+                      "isLoading": false,
+                      "leftColumn": 36,
+                      "dynamicBindingPathList": [],
+                      "borderRadius": "0px",
+                      "buttonVariant": "SECONDARY",
+                      "text": "Cancel",
+                      "isDisabled": false
+                    },
+                    {
+                      "labelTextSize": "0.875rem",
+                      "boxShadow": "none",
+                      "widgetName": "Button3",
+                      "rightColumn": 64,
+                      "isDefaultClickDisabled": true,
+                      "buttonColor": "#03B365",
+                      "widgetId": "93ah83a6j5",
+                      "topRow": 52,
+                      "bottomRow": 56,
+                      "isVisible": true,
+                      "type": "BUTTON_WIDGET",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "c4hhvcrfmp",
+                      "isLoading": false,
+                      "leftColumn": 48,
+                      "dynamicBindingPathList": [],
+                      "borderRadius": "0px",
+                      "buttonVariant": "PRIMARY",
+                      "text": "Confirm",
+                      "isDisabled": false
+                    }
+                  ],
+                  "isDisabled": false,
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 0,
+                  "detachFromLayout": true,
+                  "widgetId": "c4hhvcrfmp",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "9elvc3qslx",
+                  "isLoading": false,
+                  "borderRadius": "0px"
+                }
+              ],
+              "height": 600,
+              "labelTextSize": "0.875rem",
+              "rightColumn": 0,
+              "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
+              "widgetId": "9elvc3qslx",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "maxDynamicHeight": 9000,
+              "width": 532,
+              "minDynamicHeight": 4
+            },
+            {
+              "setAdaptiveYMin": true,
+              "boxShadow": "none",
+              "widgetName": "Chart1",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 196,
+              "bottomRow": 228,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "9dh871t9me": {
+                  "seriesName": "Issues in select family",
+                  "data": "[\n  {\n    \"x\": \"Select widget\",\n    \"y\": 13\n  },\n  {\n    \"x\": \"Multiselect Widget\",\n    \"y\": 4\n  },\n  {\n    \"x\": \"Tree select\",\n    \"y\": 1\n  },\n  {\n    \"x\": \"Multi treeselect\",\n    \"y\": 1\n  }\n]"
+                }
+              },
+              "animateLoading": true,
+              "parentColumnSpace": 29.234375,
+              "dynamicTriggerPathList": [],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "leftColumn": 22,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                }
+              ],
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "rsnuzu5rbw",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 46,
+              "widgetId": "1esuziqs8i",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "No. of issues",
+              "chartName": "Issues in select family",
+              "borderRadius": "0px",
+              "xAxisName": "Widget",
+              "chartType": "COLUMN_CHART"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Issue Stats_fetchWidgetIssues1",
+              "name": "fetchWidgetIssues1",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Issue Stats_fetchWidgetIssues2",
+              "name": "fetchWidgetIssues2",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Issue Stats_fetchLabels",
+              "name": "fetchLabels",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Issue Stats",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": true
+  },
+  "deleted": false,
+  "gitSyncId": "64671326043cb8668c6daa02_64671326043cb8668c6daa0d"
+}

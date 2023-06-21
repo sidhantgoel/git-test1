@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "releaseStatus",
+    "pageId": "Release Manager",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "statuses",
+        "value": "[{\n  name: \"initiated\",\n  desc: \"Release has been frozen and a regression is in place\"\n}, {\n  name: \"regression_end\",\n  desc: \"Regression has completed and promotion is in progress\"\n}, {\n  name: \"promotion_complete\",\n  desc: \"Latest release has been promoted to master and is now available on Appsmith Cloud. Tagging is in progress\"\n}, {\n  name: \"tagging_complete\",\n  desc: \"Latest release tagged and available on self-hosted instances\"\n}, {\n  name: \"release_failed\",\n  desc: \"This release had blockers and the team decided to not promote the release\"\n}]"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Release Manager_releaseStatus",
+  "deleted": false,
+  "gitSyncId": "5fb67116322ddc249377f5e9_61f1259c9d6d6a6720c95905"
+}

@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "team",
+    "pageId": "Release Manager",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "team",
+        "value": "[{\n  name: \"UI Builders\",\n  channel: \"pod-ui-builders\",\n  team: ['Ashok', 'Rahul', 'Abhinav', 'Aswath', 'Ankur', 'Rohit', 'Preet', 'Arsalan']\n}, {\n  name: \"App Viewers\",\n  channel: \"pod-app-viewers\",\n  team: ['Balaji', 'Pawan', 'Ashit', 'Toolulope', 'Keyur', 'Somangshu', 'Dhruvik']\n}, {\n  name: \"FE Coders\",\n  channel: \"pod-fe-coders\",\n  team: ['Arun', 'Apeksha', 'Rishab', 'Favour', 'Aishwarya', 'Satbir', 'Rimil', 'Ravi', 'Druthi']\n}, {\n  name: \"Data Platform\",\n  channel: \"pod-data-platform\",\n  team: ['Ayush', 'Nidhi', 'Manish', 'Chandan', 'Subrata', 'Ritesh']\n}, {\n  name: \"Data Integrations\",\n  channel: \"pod-data-integration\",\n  team: ['Aman', 'Ade', 'Sumit', 'Sneha', 'Felix', 'Vaibhav']\n}, {\n  name: \"Team Managers\",\n  channel: \"pod-team-managers\",\n  team: ['Ankita', 'Vishnu', 'Anagh', 'Abhijeet', 'Trisha', 'Hitesh', 'Sangeeth', 'Sidhant', 'Nilesh']\n}, {\n  name: \"New Developers\",\n  channel: \"pod-new-developers\",\n  team: ['Hetu', 'Akash', 'Anand', 'Nayan', 'Ginil', 'Nilansh']\n}, {\n  name: \"DevOps\",\n  channel: \"team-devops\",\n  team: ['Shrikant', 'Sumesh', 'Goutham']\n}, {\n  name: \"Design System Pod\",\n  channel: \"design-system\",\n  team: ['Albin', 'Tanvi', 'Rohit']\n}]"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Release Manager_team",
+  "deleted": false,
+  "gitSyncId": "5fb67116322ddc249377f5e9_61e939ad8e1c8336315360e8"
+}

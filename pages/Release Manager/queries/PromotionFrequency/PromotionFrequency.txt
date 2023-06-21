@@ -1,0 +1,5 @@
+SELECT avg(difference)
+FROM ( 
+  SELECT release_date - lag(release_date) over (order by release_date) as difference
+  FROM public.release_manager WHERE release_date IS NOT NULL
+) t;

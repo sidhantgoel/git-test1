@@ -1,0 +1,5 @@
+UPDATE public.release_manager
+  SET status = 'release_failed', 
+	release_fail_reason = '{{inputReleaseFailedReason.text}}',
+	release_fail_issues = '{{inputReleaseFailedIssues.text}}'
+  WHERE id = {{ Table1.selectedRow.id }};

@@ -1,0 +1,1 @@
+SELECT * FROM public.release_manager ORDER BY created_at desc LIMIT 1;

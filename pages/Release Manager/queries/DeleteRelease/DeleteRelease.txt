@@ -1,0 +1,2 @@
+DELETE FROM public.release_manager
+  WHERE id = {{Table1.selectedRow.id}};

@@ -1,0 +1,9 @@
+INSERT INTO public.standup ("name", "yesterday", "today", "blocked", "date", "pod", "dayrating", "restrating", "focusrating")
+  VALUES ('{{appsmith.user.name || appsmith.user.email.split('@')[0]  }}', '{{yesterdayWork.text}}', 
+					'{{todayWork.text}}', 
+					'{{blockedName.selectedOptionValues.toString()}}', 
+					'{{moment().format("YYYY-MM-DD")}}', 
+					'{{SelectPod.selectedOptionValue}}', 
+					{{Rating1.value}}, 
+					{{Rating2.value}},
+   				{{Rating3.value}});

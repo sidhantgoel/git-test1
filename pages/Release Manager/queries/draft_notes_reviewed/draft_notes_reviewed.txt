@@ -1,0 +1,3 @@
+UPDATE public.release_manager SET
+    draft_notes_reviewed = true
+  WHERE id = {{Table1.selectedRow.id}}; 

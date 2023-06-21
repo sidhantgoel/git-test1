@@ -1,0 +1,4 @@
+SELECT avg(difference) FROM (
+	SELECT id, EXTRACT(EPOCH FROM (regression_end::timestamp - regression_start::timestamp)) as difference
+	FROM public.release_manager
+) t

@@ -1,0 +1,5 @@
+UPDATE public.release_manager SET
+    regression_end = '{{moment(DatePicker1.selectedDate)}}',
+		blockers = '{{Input2.text}}',
+		status = '{{releaseStatus.getNextStatus().name}}'
+  WHERE id = {{Table1.selectedRow.id}}; 

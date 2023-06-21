@@ -1,0 +1,1 @@
+SELECT * FROM public.standup where date = '{{DatePicker1.formattedDate}}' {{Input1.text ? "and name ~* '" + Input1.text + "'" : ""}} {{Select1.selectedOptionValue ? "and pod = '" + Select1.selectedOptionValue + "'" : ""}}

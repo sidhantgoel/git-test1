@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "utils",
+    "pageId": "Team Stats",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "unwantedLabelList",
+        "value": "[\"App Viewers Pod\", \"New Developers Pod\", \"Needs Triaging\", \"UI Builders Pod\", \"Stale\", \"skip-changelog\", \"Performance Pod\", \"Documentation\", \"User Education Pod\", \"Ready for Doc Team\", \"QA\", \"Production\", \"UI Improvement\"]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Team Stats_utils",
+  "deleted": false,
+  "gitSyncId": "5fb67116322ddc249377f5e9_644fafedbf34ca68b34eee23"
+}

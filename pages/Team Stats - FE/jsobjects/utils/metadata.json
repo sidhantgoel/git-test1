@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "utils",
+    "pageId": "Team Stats - FE",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "unwantedLabelList",
+        "value": "[\"App Viewers Pod\", \"New Developers Pod\", \"Needs Triaging\", \"UI Builders Pod\", \"Stale\", \"skip-changelog\", \"Performance Pod\", \"Documentation\", \"User Education Pod\", \"Ready for Doc Team\", \"QA\", \"Production\", \"UI Improvement\"]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Team Stats - FE_utils",
+  "deleted": false,
+  "gitSyncId": "5fb67116322ddc249377f5e9_645e0b018dfd9150bb9ecd4a"
+}

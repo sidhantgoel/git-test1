@@ -1,0 +1,41 @@
+query getZenhubSprint($workspaceId: ID!){
+  workspace(id: $workspaceId) {
+    activeSprint {
+      startAt
+      endAt
+      totalPoints
+      issues {
+        nodes {
+          id
+          ghId
+          htmlUrl
+          number
+          title
+          closedAt
+          estimate {
+            value
+          }
+          labels {
+            nodes {
+              id
+              name
+            }
+          }
+          assignees {
+            nodes {
+              id
+              name
+              login
+            }
+          }
+          pipelineIssue(workspaceId: "${workspaceId}") {
+            pipeline {
+              id
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}

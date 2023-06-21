@@ -1,0 +1,3 @@
+select count(*),
+       avg(((blockers = '')IS NOT TRUE)::int ) * 100 as blocker_percentage
+from public.release_manager;

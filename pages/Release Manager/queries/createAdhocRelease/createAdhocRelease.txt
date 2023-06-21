@@ -1,0 +1,3 @@
+INSERT INTO public.release_manager (version, name, tag_date, assigned_pod, pod_members, status, release_notes_link)
+  VALUES ('{{this.params.adhocVersion}}', 
+					'{{this.params.adhocName}}', '{{this.params.adhocTagDate}}', 'Auto Created', 'github-actions[bot]', 'tagging_complete', '{{Table1.selectedRow.release_notes_link}}');

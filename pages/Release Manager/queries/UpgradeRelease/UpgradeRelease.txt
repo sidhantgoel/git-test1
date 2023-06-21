@@ -1,0 +1,5 @@
+UPDATE public.release_manager SET
+    name = '{{this.params.upgradeName}}',
+		version = '{{this.params.upgradeVersion}}',
+		status = '{{this.params.upgradeStatus}}'
+  WHERE id = {{this.params.upgradeId}}

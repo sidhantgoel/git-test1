@@ -1,0 +1,1 @@
+SELECT count(*), github_tag_id  FROM support_tickets inner join ticket_tags on support_tickets.id = ticket_tags.ticket_id  group by github_tag_id

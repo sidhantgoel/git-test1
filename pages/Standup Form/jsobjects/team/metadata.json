@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "team",
+    "pageId": "Standup Form",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[{\n  \"label\": \"UI Builder's POD\",\n  \"value\": \"ui-builder-pod\",\n  \"name\": \"UI Builders\"\n}, {\n  \"label\": \"App Viewer's POD\",\n  \"value\": \"app-viewer-pod\",\n  \"name\": \"App Viewers\"\n}, {\n  \"label\": \"FE coder's POD\",\n  \"value\": \"fe-coder-pod\",\n  \"name\": \"FE Coders\"\n}, {\n  \"label\": \"BE coder's POD\",\n  \"value\": \"be-coder-pod\",\n  \"name\": \"BE Coders\"\n}, {\n  \"label\": \"Team Manager's POD\",\n  \"value\": \"team-manager-pod\",\n  \"name\": \"Team Managers\"\n}, {\n  \"label\": \"New Developers's POD\",\n  \"value\": \"new-developer-pod\",\n  \"name\": \"New Developers\"\n}]"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Standup Form_team",
+  "deleted": false,
+  "gitSyncId": "5fb67116322ddc249377f5e9_61f7a9239d6d6a6720c9a450"
+}

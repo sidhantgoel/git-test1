@@ -1,0 +1,5 @@
+UPDATE public.release_manager SET
+    tag_date = '{{moment(DatePicker1Copy.selectedDate)}}',
+		release_notes_link = '{{Input1Copy.text}}',
+		status = '{{releaseStatus.getNextStatus().name}}'
+  WHERE id = {{Table1.selectedRow.id}}; 

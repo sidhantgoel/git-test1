@@ -1,0 +1,1 @@
+SELECT * FROM public.standup where name = '{{appsmith.user.name}}' and date <= '{{Utils.getPreviousWorkday().format('YYYY-MM-DD')}}'

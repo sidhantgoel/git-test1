@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "Github_Transformer",
+    "pageId": "Todays Updates",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "results",
+        "value": "[]"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Todays Updates_Github_Transformer",
+  "deleted": false,
+  "gitSyncId": "5fb67116322ddc249377f5e9_61c4343be89bc475f3cd1117"
+}
